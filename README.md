@@ -11,5 +11,7 @@ Then, you can run the following command to launch the visualization:
 ```bash
 bokeh serve --show bokeh_c10H.py
 ```
-at the root of the directory.
-
+at the root of the directory, and then open the link in your browser.
+The output should look like this:
+<!-- insert image bokeh.png-->
+<img src="./images/bokeh.png" alt="drawing" width="600"/>
