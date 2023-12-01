@@ -4,12 +4,12 @@ This repository contains code to visualize the WAUM and AUM of a given dataset. 
 
 
 To use the code, you need to install the following packages:
-- peerannot
-- bokeh
+- `peerannot`
+- `bokeh`
 
 Then, you can run the following command to launch the visualization:
 ```bash
-bokeh serve --show bokeh_c10H.py --port 5007;
+bokeh serve --show bokeh_c10H.py
 ```
 at the root of the directory.
 
