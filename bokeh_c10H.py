@@ -1,8 +1,10 @@
 # %%
-# Run the following command to see the results:
+#
+#  Run the following command to see the results:
 # conda activate peerannot;
-# cd /home/jsalmon/Documents/Mes_papiers/Tanguy/tanguy_phd/reproducible_paper/cifar10H/;
 # bokeh serve --show bokeh_c10H.py --port 5007;
+#
+#
 # see http://14.99.188.242:8080/jspui/bitstream/123456789/14487/1/Hands-On%20Data%20Visualization%20with%20Bokeh%20Interactive%20Web%20Plotting%20for%20Python%20Using%20Bokeh%20by%20Kevin%20Jolly%20%28z-lib.org%29.pdf page 149
 
 from numpy.random import random, normal
@@ -187,7 +189,7 @@ aums["waum_yang"] = aums["waum"]
 
 resnet = 18
 full_logits = pd.read_parquet(
-    os.path.join(dirfile, "results", f"resnet{resnet}", f"logits_full_{resnet}.csv")
+    os.path.join(dirfile, "results", f"resnet{resnet}", f"logits_full_{resnet}.parquet")
 )
 aum_df = aum_from_logits(full_logits)
 # %%
