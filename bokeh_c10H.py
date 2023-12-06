@@ -41,7 +41,7 @@ import torch
 import torch.nn as nn
 import os
 import matplotlib.lines as mlines
-from peerannot.models import Soft
+from peerannot.models import NaiveSoft
 from scipy.special import entr
 import json
 from scipy import interpolate
@@ -201,7 +201,7 @@ inv_classes = dict(zip(dict_classes.values(), dict_classes.keys()))
 n_sub = 9500
 aums = aums[:n_sub]
 aums_vanilla = aum_df[:n_sub]
-soft = Soft(labels_json, n_classes=10)
+soft = NaiveSoft(labels_json, n_classes=10)
 yp = soft.get_probas()
 entropy = entr(yp).sum(1)
 idx_correct = aums["sample_id"].tolist()
