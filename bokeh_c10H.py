@@ -9,7 +9,7 @@
 
 from numpy.random import random, normal
 from bokeh.plotting import figure
-from bokeh.layouts import row, column, gridplot
+from bokeh.layouts import gridplot
 from bokeh.models import (
     Select,
     BoxSelectTool,
@@ -19,28 +19,22 @@ from bokeh.models import (
     Div,
 )
 from bokeh.io import curdoc
-from bokeh.models.glyphs import Circle, Segment
-from bokeh.palettes import Category10, Spectral10, Viridis256, Turbo256, mpl
+from bokeh.models.glyphs import Circle
+from bokeh.palettes import Category10
 from bokeh.models import (
     HoverTool,
     ColumnDataSource,
-    CategoricalColorMapper,
     Select,
-    Span,
     Legend,
 )
-from bokeh.plotting import figure, show, output_file
+from bokeh.plotting import figure, output_file
 import base64
 from PIL import Image
 from io import BytesIO
-import itertools
 import numpy as np
 import pandas as pd
 import torchvision
-import torch
-import torch.nn as nn
 import os
-import matplotlib.lines as mlines
 from peerannot.models import NaiveSoft
 from scipy.special import entr
 import json
@@ -176,10 +170,6 @@ trainset = torchvision.datasets.CIFAR10(
 )
 
 batch_size = 64
-
-trainloader = torch.utils.data.DataLoader(
-    trainset, batch_size=batch_size, shuffle=True, num_workers=2
-)
 
 
 aums = pd.read_csv(os.path.join(dirfile, "waums_c10h_red_yang.csv"))

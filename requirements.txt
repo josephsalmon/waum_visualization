@@ -1,0 +1,11 @@
+bokeh==3.3.2
+# matplotlib==3.8.2
+numpy==1.25.2
+pandas==2.1.3
+peerannot==0.0.1.post34
+Pillow==10.1.0
+scipy==1.11.4
+# torch==2.1.1
+torchvision==0.16.1
+pyarrow==14.0.1
+fastparquet==2023.10.1
